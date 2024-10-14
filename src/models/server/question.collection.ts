@@ -26,9 +26,11 @@ export default async function createQuestionCollection(){
   ]);
   console.log("Question Attributes created")
 
-  // create Indexes
+  // adding a delay to ensure attributes are fully available before indexing
+  await new Promise(resolve => setTimeout(resolve, 2000));
 
-  /*
+  // create Indexes
+  
   await Promise.all([
     databases.createIndex(
       db,
@@ -47,5 +49,4 @@ export default async function createQuestionCollection(){
       ['asc']
     )
   ])
-    */
 }
