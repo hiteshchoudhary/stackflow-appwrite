@@ -1,0 +1,11 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "functions": {
+    "src/app/api/**": {
+      "maxDuration": 30
+    }
+  }
+}
